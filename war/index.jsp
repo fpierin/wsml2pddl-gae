@@ -1,8 +1,11 @@
-<form action="/tradutor" method="post">
-	<div>
-		<textarea name="documento" rows="20" cols="100"></textarea>
-	</div>
-	<div>
-		<input type="submit" value="Traduzir" />
-	</div>
-</form>
+<div>
+	<form action="/tradutor" method="post">
+		<div class="tradutor">
+			<textarea name="documento"></textarea>
+			<textarea name="wsml"></textarea>
+		</div>
+		<div>
+			<input type="submit" value="Traduzir" />
+		</div>
+	</form>
+</div>

@@ -1,0 +1,47 @@
+body {
+	background-color: #f5f5f5;
+	color:  #545454;
+	margin: 0px;
+	text-align: left;
+}
+
+a link {
+	color:  navy;
+}
+
+a :HOVER {
+	color: lime;
+}
+
+a :VISITED {
+	color:  navy;	
+}
+
+.wrapper {
+	background-color: white;
+	border: 1px solid black;
+	border-width:  0px 1px 0px 1px;
+	margin: 0 50 px;
+}
+
+.header  {
+	height: 100px;
+}
+
+.footer {
+	min-height: 100px;	
+}
+
+.content {
+	text-align: center;
+}
+
+.conteudo {
+	margin-top: 1px;
+	min-height: 500px;
+}
+
+.tradutor textarea{
+	color: navy;
+	min-width: 400px;
+}
