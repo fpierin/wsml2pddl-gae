@@ -1,0 +1,25 @@
+body {
+	background-color: #f5f5f5;
+	color:  #545454;
+	text-indent: 180%;
+}
+
+a link {
+	color:  navy;
+}
+
+a :HOVER {
+	color: lime;
+}
+
+a :VISITED {
+	color:  navy;	
+}
+
+.header  {
+	background-color: red;
+}
+
+.footer {
+	background-color: #778899;
+}
