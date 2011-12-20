@@ -1,7 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<div>
+<div class="tradutor">
 	<form action="/tradutor" method="post">
-		<div class="tradutor">
+		<div>
 			<textarea name="documento">
 			<%=((String) request.getAttribute("documento"))%>
 			</textarea>

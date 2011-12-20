@@ -2,15 +2,15 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=ISO-8851">
-<link href="css/estilos.css" rel="stylesheet" type="text/css"
-	media="screen" />
-<meta name="description"
-	content="Wsml2Pddl - Online wsml to pddl language translator" />
-<meta name="keywords"
-	content="wsml, pddl, translator, tradutor, online, semantic, webservice" />
+<link href="css/estilos.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="js/tradutor.js"></script>
+<meta name="description"	content="Wsml2Pddl - Online wsml to pddl language translator" />
+<meta name="keywords"	content="wsml, pddl, translator, tradutor, online, semantic, webservice" />
 <title>Wsdl2Pddl - Tradutor online WSML para PDDL</title>
 </head>
 <body>
 	<div class="wrapper">
-		<div class="header"></div>
+		<div class="header">
+			<div id="logotipo">Wsml<span>2</span>Pddl</div>
+		</div>
 		<div class="content">
