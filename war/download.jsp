@@ -3,16 +3,20 @@
 </div>
 <div class="download">
 	<p>
-		O módulo tradutor está disponível para download em: <a
-			href="http://github.com/fpierin/wsml2pddl-gae/blob/master/war/WEB-INF/lib/wsml2pddl.jar?raw=true">http://github.com/fpierin/wsml2pddl-gae/blob/master/war/WEB-INF/lib/wsml2pddl.jar?raw=true</a>
+		A monografia que deu origem ao tradutor (.pdf) <a
+			href="/downloads/monografia_felipepierin.pdf">[download]</a>
 	</p>
 	<p>
-		O código fonte do módulo tradutor está disponível em: <a
-			href="http://github.com/fpierin/wsml2pddl">http://github.com/fpierin/wsml2pddl</a>
+		O módulo tradutor (.jar) <a
+			href="http://github.com/fpierin/wsml2pddl-gae/blob/master/war/WEB-INF/lib/wsml2pddl.jar?raw=true">[download]</a>
 	</p>
 	<p>
-		O código fonte da módulo tradutor acoplado a web está disponível em: <a
-			href="http://github.com/fpierin/wsml2pddl-gae">http://github.com/fpierin/wsml2pddl-gae</a>
+		O código fonte do módulo tradutor está disponível (GitHub) <a
+			href="http://github.com/fpierin/wsml2pddl">[source]</a>
+	</p>
+	<p>
+		O código fonte da módulo tradutor acoplado a web (GitHub) <a
+			href="http://github.com/fpierin/wsml2pddl-gae">[source]</a>
 	</p>
 </div>
 <div class="history">
