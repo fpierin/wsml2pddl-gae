@@ -130,6 +130,10 @@ a:HOVER {
 	padding: 5px 9px 4px 9px;
 }
 
+.tradutor input:HOVER{
+	background-color: #545454;
+}
+
 .title {
 	font-weight: bold;
 	text-shadow: #f5f5f5 0px 0px 2px;
