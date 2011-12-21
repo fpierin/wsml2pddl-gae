@@ -17,4 +17,18 @@
 </div>
 <div class="historico">
 	<hr>
+	<div>
+		<div>
+		Últimas atualizações do  projeto wsml2pddl
+		</div>
+		<%=((String) request.getAttribute("atualizacoesWsml2Pddl"))%>
+	</div>
+	<div>
+	</div>
+	<div>
+		<div>Últimas atualizações do  projeto wsml2pddl-gae</div>
+		<%=((String) request.getAttribute("atualizacoesWsml2Pddl-Gae"))%>
+	</div>
+	<div>
+	</div>		
 </div>

@@ -20,10 +20,10 @@
 		<div id="navbar">
 			<ul>
 				<li><a href="projeto.jsp">O projeto</a></li>
-				<li><a href="tradutor.jsp">Tradutor</a></li>
-				<li><a href="download.jsp">Download</a></li>
+				<li><a href="/tradutor">Tradutor</a></li>
+				<li><a href="/download">Download</a></li>
 				<li><a href="trabalhos.jsp">Trabalhos relacionados</a></li>
-				<li><a href="autor">Sobre o autor</a></li>
+				<li><a href="autor.jsp">Sobre o autor</a></li>
 			</ul>
 		</div>
 	</div>

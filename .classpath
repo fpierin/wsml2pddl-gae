@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/wsml2pddl.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/abdera-1.1.2.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/axiom.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
