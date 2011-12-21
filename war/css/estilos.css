@@ -111,6 +111,15 @@ a:HOVER {
 	padding: 2px;
 }
 
+.tradutor p {
+	margin: 5px 50px;
+}
+
+.tradutor table {
+	margin: 5px 50px;
+	font-size: 12px;
+}
+
 .tradutor input {
 	background-color: #4169E1;
 	border-radius: 3px;
@@ -135,6 +144,6 @@ a:HOVER {
 	padding: 1px;
 	float: left;
 	margin: 15px 15px 15px 0;
-	height: 75px; 
+	height: 75px;
 	width: 60px;
 }
