@@ -35,5 +35,4 @@ mapeamento em serviço WSML equivalente.</p>
 PÉREZ-ALCÁZAR, J. J. <b>Projeto: O uso de Planejamento em Inteligência Artificial
 para a Composição Automática de Serviços Web</b>, São Paulo: EACH-USP, 2007. 25 p.
 Relatório cientifico apresentado à FAPESP, São Paulo.
-
 </p>

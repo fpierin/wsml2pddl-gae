@@ -3,7 +3,6 @@ body {
 	color:  #545454;
 	font-family: Georgia, Times, serif;
 	font-size: 12px;
-	height: 100%;
 	line-height: 180%;
 	margin: 0px;
 	min-height: 600px;
@@ -79,7 +78,7 @@ a:HOVER {
 	border-radius: 5px;	
 	box-shadow: 0px 0px 1px #e0e0e0; 
 	min-height: 500px;
-	padding: 15px 15px 15px 15px;
+	padding: 5px 15px 15px 15px;
 }
 
 .tradutor {
