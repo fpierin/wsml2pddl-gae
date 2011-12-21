@@ -15,18 +15,19 @@
 			href="http://github.com/fpierin/wsml2pddl-gae">http://github.com/fpierin/wsml2pddl-gae</a>
 	</p>
 </div>
-<div class="historico">
+<div class="history">
 	<hr>
 	<div>
 		<div>
-		Últimas atualizações do  projeto wsml2pddl
+		<p class="title">Últimas atualizações do  projeto wsml2pddl</p>
 		</div>
 		<%=((String) request.getAttribute("atualizacoesWsml2Pddl"))%>
 	</div>
 	<div>
+	<br>
 	</div>
 	<div>
-		<div>Últimas atualizações do  projeto wsml2pddl-gae</div>
+		<div><p class="title">Últimas atualizações do  projeto wsml2pddl-gae</p></div>
 		<%=((String) request.getAttribute("atualizacoesWsml2Pddl-Gae"))%>
 	</div>
 	<div>

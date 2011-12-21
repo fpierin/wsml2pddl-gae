@@ -12,32 +12,43 @@ import br.usp.each.wsml2pddl.sistema.CompiladorWsmlPDDL;
 
 public class TradutorServlet extends HttpServlet {
 
-	private static final long serialVersionUID = 736071737077995516L;
+    private static final long serialVersionUID = 736071737077995516L;
 
-	@Override
-	public void doPost(final HttpServletRequest request, final HttpServletResponse response) {
-		final String contextoOriginal = request.getParameter("documento");
-		String contextoCompilacao = "";
+    @Override
+    protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
+	req.setAttribute("compilacao", "");
+	req.setAttribute("documento", "");
+	req.getRequestDispatcher("tradutor.jsp").forward(req, resp);
+	super.doGet(req, resp);
+    }
 
-		try {
-			final Compilador compilador = new CompiladorWsmlPDDL();
-			contextoCompilacao = compilador.compila(contextoOriginal);
-		} catch (final Exception e) {
-			contextoCompilacao = e.getMessage();
-		}
+    @Override
+    public void doPost(final HttpServletRequest req, final HttpServletResponse resp) {
+	String contextoCompilacao = "";
+	final String contextoOriginal = req.getParameter("documento");
 
-		final String contextoHTML = (contextoCompilacao != null)? contextoCompilacao.replaceAll(" ", "&nbsp").replaceAll("(\r\n|\n)", "<br />"): "";
+	if (!contextoOriginal.equals("")) {
+	    try {
+		final Compilador compilador = new CompiladorWsmlPDDL();
+		contextoCompilacao = compilador.compila(contextoOriginal);
+	    } catch (final Exception e) {
+		contextoCompilacao = e.getCause().getMessage();
+	    }
 
-		request.setAttribute("compilacao", contextoHTML);
-		request.setAttribute("documento", contextoOriginal);
-
-		try {
-			request.getRequestDispatcher("traducao.jsp").forward(request, response);
-		} catch (final ServletException e) {
-			e.printStackTrace();
-		} catch (final IOException e) {
-			e.printStackTrace();
-		}
+	    contextoCompilacao = (contextoCompilacao != null) ? contextoCompilacao.replaceAll(" ", "&nbsp").replaceAll("(\r\n|\n)", "<br />")
+		    : "Não foi possivel realizar a tradução. Verifique se o wsml é válido.";
 	}
+
+	req.setAttribute("compilacao", contextoCompilacao.trim());
+	req.setAttribute("documento", contextoOriginal.trim());
+
+	try {
+	    req.getRequestDispatcher("tradutor.jsp").forward(req, resp);
+	} catch (final ServletException e) {
+	    e.printStackTrace();
+	} catch (final IOException e) {
+	    e.printStackTrace();
+	}
+    }
 
 }

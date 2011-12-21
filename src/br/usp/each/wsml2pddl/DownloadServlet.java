@@ -22,7 +22,8 @@ public class DownloadServlet extends HttpServlet {
     @Override
     protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
 	req.setAttribute("atualizacoesWsml2Pddl", obterAtualizacaoesDoProjeto("https://github.com/fpierin/wsml2pddl/commits/master.atom"));
-	req.setAttribute("atualizacoesWsml2Pddl-Gae", obterAtualizacaoesDoProjeto("https://github.com/fpierin/wsml2pddl/commits/master.atom"));
+	req.setAttribute("atualizacoesWsml2Pddl-Gae", obterAtualizacaoesDoProjeto("https://github.com/fpierin/wsml2pddl-Gae/commits/master.atom"));
+	req.getRequestDispatcher("download.jsp").forward(req, resp);
 	super.doGet(req, resp);
     }
 
@@ -34,15 +35,15 @@ public class DownloadServlet extends HttpServlet {
 	    final URL url = new URL(urlDeCommitsDoProjeto);
 	    final Document<Feed> doc = parser.parse(url.openStream(), url.toString());
 	    final Feed feed = doc.getRoot();
+	    final StringBuffer stringBuffer = new StringBuffer();
 	    for (final Entry entry : feed.getEntries()) {
-		final StringBuffer stringBuffer = new StringBuffer();
 		stringBuffer.append("<div>");
 		stringBuffer.append("<a href=\"" + entry.getLinks().get(0).getHref() + "\">");
 		stringBuffer.append(simpleDateFormat.format(entry.getUpdated()) + ": " + entry.getTitle());
 		stringBuffer.append("</a>");
 		stringBuffer.append("</div>");
-		return stringBuffer.toString();
 	    }
+	    return stringBuffer.toString();
 	} catch (final Exception ex) {
 	    System.out.println("Error: " + ex.getMessage());
 	}

@@ -12,13 +12,17 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         </jsp-property-group>  
     </jsp-config>	
 	<servlet>
-		<servlet-name>download</servlet-name>
-		<servlet-class>br.usp.each.wsml2pddl.DownloadServlet</servlet-class>
+		<servlet-name>tradutor</servlet-name>
+		<servlet-class>br.usp.each.wsml2pddl.TradutorServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>tradutor</servlet-name>
 		<url-pattern>/tradutor</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>download</servlet-name>
+		<servlet-class>br.usp.each.wsml2pddl.DownloadServlet</servlet-class>
+	</servlet>	
 	<servlet-mapping>
 		<servlet-name>download</servlet-name>
 		<url-pattern>/download</url-pattern>
