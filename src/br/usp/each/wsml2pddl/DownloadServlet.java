@@ -1,6 +1,8 @@
 package br.usp.each.wsml2pddl;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 
@@ -26,13 +28,18 @@ public class DownloadServlet extends HttpServlet {
 	req.getRequestDispatcher("download.jsp").forward(req, resp);
     }
 
+    private InputStream getRemoteStream(final String urlDeCommitsDoProjeto) throws IOException {
+	final URL url = new URL(urlDeCommitsDoProjeto);
+	final HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+	return httpURLConnection.getInputStream();
+    }
+
     private String obterAtualizacaoesDoProjeto(final String urlDeCommitsDoProjeto) {
 	final Parser parser = new Abdera().getParser();
 	final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
 	try {
-	    final URL url = new URL(urlDeCommitsDoProjeto);
-	    final Document<Feed> doc = parser.parse(url.openStream(), url.toString());
+	    final Document<Feed> doc = parser.parse(getRemoteStream(urlDeCommitsDoProjeto));
 	    final Feed feed = doc.getRoot();
 	    final StringBuffer stringBuffer = new StringBuffer();
 	    for (final Entry entry : feed.getEntries()) {

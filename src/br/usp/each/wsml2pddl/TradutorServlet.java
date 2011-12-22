@@ -37,10 +37,7 @@ public class TradutorServlet extends HttpServlet {
 	    if (contextoCompilacao == null) {
 		contextoCompilacao = "Não foi possivel realizar a tradução. Verifique se o wsml é válido.";;
 	    }
-	    // contextoCompilacao = (contextoCompilacao != null) ?
-	    // contextoCompilacao.replaceAll(" ",
-	    // "&nbsp").replaceAll("(\r\n|\n)", "<br />")
-	    // :
+
 	}
 
 	req.setAttribute("compilacao", contextoCompilacao.trim());
