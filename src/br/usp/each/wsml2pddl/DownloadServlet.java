@@ -24,7 +24,6 @@ public class DownloadServlet extends HttpServlet {
 	req.setAttribute("atualizacoesWsml2Pddl", obterAtualizacaoesDoProjeto("https://github.com/fpierin/wsml2pddl/commits/master.atom"));
 	req.setAttribute("atualizacoesWsml2Pddl-Gae", obterAtualizacaoesDoProjeto("https://github.com/fpierin/wsml2pddl-Gae/commits/master.atom"));
 	req.getRequestDispatcher("download.jsp").forward(req, resp);
-	super.doGet(req, resp);
     }
 
     private String obterAtualizacaoesDoProjeto(final String urlDeCommitsDoProjeto) {
