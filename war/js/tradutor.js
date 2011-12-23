@@ -1,4 +1,5 @@
 function insereExemplo1() {
+	$("textarea#wsml").val("");
 	$("textarea#documento").val(
 "wsmlVariant _http://www.wsmo.org/wsml/wsml-syntax/wsml-flight\n"+
 "namespace { _\"http://www.gsmo.org/dip/travel/domainOntology#\",\n"+
@@ -47,6 +48,7 @@ function insereExemplo1() {
 };
 
 function insereExemplo2() {
+	$("textarea#wsml").val("");
 	$("textarea#documento").val(
 "wsmlVariant _http://www.wsmo.org/wsml/wsml-syntax/wsml-flight" + "\n" +
 "namespace { _\"http://www.gsmo.org/dip/travel/goal#\"," + "\n" +
@@ -64,7 +66,8 @@ function insereExemplo2() {
 };
 
 function insereExemplo3() {
-	$("textarea#documento").html(
+	$("textarea#wsml").val("");
+	$("textarea#documento").val(
 "wsmlVariant _\"http://www.wsmo.org/wsml/wsml-syntax/wsml-rule\"" + "\n" +
 "" + "\n" +
 "namespace { _\"http://lsirpeople.epfl.ch/lhvu/ontologies/TestFuncDisc/TestGoal.wsml#\"," + "\n" +
@@ -120,8 +123,9 @@ function insereExemplo3() {
 	);
 };
 
-function insereExemplo4() {
-		$("textarea#documento").html(
+function insereExemplo4() {	
+		$("textarea#wsml").val("");
+		$("textarea#documento").val(
 "wsmlVariant _\"http://www.wsmo.org/wsml/wsml-syntax/wsml-flight\"" +"\n" +
 "" +"\n" +
 "namespace {_\"http://www.gsmo.org/dip/travel/goal#\"," +"\n" +

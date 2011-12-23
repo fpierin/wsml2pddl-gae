@@ -35,7 +35,7 @@ public class TradutorServlet extends HttpServlet {
 	    }
 
 	    if (contextoCompilacao == null) {
-		contextoCompilacao = "Não foi possivel realizar a tradução. Verifique se o wsml é válido.";;
+		contextoCompilacao = "Não foi possivel realizar a tradução. Verifique se o wsml é válido.";
 	    }
 
 	}
